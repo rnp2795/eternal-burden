@@ -1,4 +1,5 @@
 import { ModeToggle } from "@/components/mode-toggle";
+import { PauseToggle } from "../pause-toggle";
 
 export const GameHeader = () => {
   return (
@@ -8,6 +9,7 @@ export const GameHeader = () => {
       </div>
       <div className="flex items-center gap-2">
         <ModeToggle />
+        <PauseToggle />
       </div>
     </div>
   );

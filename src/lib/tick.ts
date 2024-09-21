@@ -1,14 +1,14 @@
+import { useGameStateStore } from "@/lib/game-state-store";
+
+const onTick = () => {};
+
 export const tick = () => {
-  // TODO: Import from game state.
-  const gameIsPaused = false;
-
-  const tickRunInterval = 300;
-
-  const tickRun = () => {};
-
   setInterval(() => {
+    // Get a list of conditions to check if the game should tick.
+    const gameIsPaused = useGameStateStore.getState().gameIsPaused;
+
     if (!gameIsPaused) {
-      tickRun();
+      onTick();
     }
-  }, tickRunInterval);
+  }, 300);
 };
