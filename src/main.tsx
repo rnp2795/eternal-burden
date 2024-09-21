@@ -2,9 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { GameShell } from "./game-shell";
+import { ThemeProvider } from "./components/theme-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <GameShell />
+    <ThemeProvider defaultTheme="dark" storageKey="game-ui-theme">
+      <GameShell />
+    </ThemeProvider>
   </StrictMode>
 );
