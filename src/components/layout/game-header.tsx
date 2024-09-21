@@ -10,7 +10,7 @@ export const GameHeader = () => {
         <p>{import.meta.env.VITE_GAME_NAME}</p>
       </div>
       <div>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-muted-foreground">
           {gameIsPaused && "Game is paused."}
         </p>
       </div>
