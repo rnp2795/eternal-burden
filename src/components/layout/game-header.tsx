@@ -6,7 +6,9 @@ export const GameHeader = () => {
       <div id="logo">
         <p>Hello, header!</p>
       </div>
-      <ModeToggle />
+      <div className="flex items-center gap-2">
+        <ModeToggle />
+      </div>
     </div>
   );
 };
